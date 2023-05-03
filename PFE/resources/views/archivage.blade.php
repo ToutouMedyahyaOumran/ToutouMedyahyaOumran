@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
   <head>
@@ -11,11 +12,15 @@
     <link rel="stylesheet" href="../../public/assets/css/style.css">
     <script src="jquery-3.6.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url('./assets/css/tailwind.output.css')}}" />
     <link rel="stylesheet" href="/fontawesome/css/all.css">
-   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WKdI6+VoP6jKVE2T7TlViElxuV7PstXkK/WV7+ZAgdOuV7bexCj1DwsswKq0h3p7dJt9YKo/RbLjhBCB2Jzl1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <script
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
@@ -31,11 +36,11 @@
       defer
     ></script>
     <script src="./assets/js/charts-lines.js" defer></script>
-  
+
     <script src="./assets/js/charts-pie.js" defer></script>
   </head>
   <body>
-  <div
+    <div
       class="flex h-screen bg-gray-50 dark:bg-gray-900"
       :class="{ 'overflow-hidden': isSideMenuOpen }"
     >
@@ -43,13 +48,14 @@
       <aside
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400 ">
-          
+        <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+            class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
             href="#"
           >
-            Mauri_Urgence
+
+          <!-- ml-6 text-lg font-bold text-gray-800 dark:text-gray-200 -->
+            Mauri Urgance
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
@@ -59,7 +65,7 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="/dachebord"
+                href="/"
               >
                 <svg
                   class="w-5 h-5"
@@ -70,12 +76,17 @@
                   stroke-width="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+
+
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   ></path>
                 </svg>
-                <span class="ml-4">Menu Prencipale</span>
+                <span class="ml-4">Menu Prencipal</span>
               </a>
             </li>
           </ul>
@@ -99,13 +110,13 @@
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
                   ></path>
                 </svg>
-                <span class="ml-4">Gestion des agents</span>
+                <span class="ml-4">Agents</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
+                href=""
               >
                 <svg
                   class="w-5 h-5"
@@ -121,13 +132,13 @@
                     d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                   ></path>
                 </svg>
-                <span class="ml-4">Gestion des vehicules</span>
+                <span class="ml-4">Département</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="charts.html"
+                href="{{ route('vehicules')}}"
               >
                 <svg
                   class="w-5 h-5"
@@ -139,133 +150,81 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>
-
+                  <path
+                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+                  ></path>
+                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
                 </svg>
-                <span class="ml-4">Gestion des supports</span>
+                <span class="ml-4">Support</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="buttons.html"
+                href="{{ route('vehicules')}}"
               >
-              <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20" height="20"><path d="M22.485,10.975,12,17.267,1.515,10.975A1,1,0,1,0,.486,12.69l11,6.6a1,1,0,0,0,1.03,0l11-6.6a1,1,0,1,0-1.029-1.715Z"/><path d="M22.485,15.543,12,21.834,1.515,15.543A1,1,0,1,0,.486,17.258l11,6.6a1,1,0,0,0,1.03,0l11-6.6a1,1,0,1,0-1.029-1.715Z"/><path d="M12,14.773a2.976,2.976,0,0,1-1.531-.425L.485,8.357a1,1,0,0,1,0-1.714L10.469.652a2.973,2.973,0,0,1,3.062,0l9.984,5.991a1,1,0,0,1,0,1.714l-9.984,5.991A2.976,2.976,0,0,1,12,14.773ZM2.944,7.5,11.5,12.633a.974.974,0,0,0,1,0L21.056,7.5,12.5,2.367a.974.974,0,0,0-1,0h0Z"/></svg>
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                  ></path>
+                </svg>
+                <span class="ml-4">Véhicules</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href=""
+              >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span class="ml-4">Interventions</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="{{ route('archivage')}}"
+              >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  ></path>
+                </svg>
                 <span class="ml-4">Archivage</span>
               </a>
             </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path>
-                </svg>
-                <span class="ml-4">Gestion des Deppartements</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  ></path>
-                </svg>
-                <span class="ml-4">Gestion des plannig</span>
-              </a>
-            </li>
-           
-            <li class="relative px-6 py-3">
-              <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                @click="togglePagesMenu"
-                aria-haspopup="true"
-              >
-                <span class="inline-flex items-center">
-                  <svg
-                    class="w-5 h-5"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                    ></path>
-                  </svg>
-                  <span class="ml-4">Pages</span>
-                </span>
-                <svg
-                  class="w-4 h-4"
-                  aria-hidden="true"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-              <template x-if="isPagesMenuOpen">
-                <ul
-                  x-transition:enter="transition-all ease-in-out duration-300"
-                  x-transition:enter-start="opacity-25 max-h-0"
-                  x-transition:enter-end="opacity-100 max-h-xl"
-                  x-transition:leave="transition-all ease-in-out duration-300"
-                  x-transition:leave-start="opacity-100 max-h-xl"
-                  x-transition:leave-end="opacity-0 max-h-0"
-                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
-                  aria-label="submenu"
-                >
-                  <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  >
-                    <a class="w-full" href="pages/login.html">Login</a>
-                  </li>
-                 
-                 
-                 
-                </ul>
-              </template>
-            </li>
-          </ul>
-          <!-- <div class="px-6 my-6">
-            <button
-              class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-            >
-              Create account
-              <span class="ml-2" aria-hidden="true">+</span>
-            </button>
-          </div> -->
+
         </div>
       </aside>
       <!-- Mobile sidebar -->
@@ -550,9 +509,9 @@
         </div>
       </aside>
       <div class="flex flex-col flex-1 w-full">
-        <header class="z-10 py-4 btn btn-primary shadow-md dark:bg-gray-800">
+        <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
           <div
-            class="container flex items-center justify-between h-4 px-6 mx-auto text-purple-600 dark:text-purple-300"
+            class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
           >
             <!-- Mobile hamburger -->
             <button
@@ -574,8 +533,8 @@
               </svg>
             </button>
             <!-- Search input -->
-            <div class="flex justify-center flex-1 lg:mr-32 ">
-              <!-- <div
+            <div class="flex justify-center flex-1 lg:mr-32">
+              <div
                 class="relative w-full max-w-xl mr-6 focus-within:text-purple-500"
               >
                 <div class="absolute inset-y-0 flex items-center pl-2">
@@ -598,12 +557,11 @@
                   placeholder="Search for projects"
                   aria-label="Search"
                 />
-              </div> -->
+              </div>
             </div>
             <ul class="flex items-center flex-shrink-0 space-x-6">
               <!-- Theme toggler -->
               <li class="flex">
-             
                 <button
                   class="rounded-md focus:outline-none focus:shadow-outline-purple"
                   @click="toggleTheme"
@@ -639,7 +597,6 @@
               </li>
               <!-- Notifications menu -->
               <li class="relative">
-                 <!-- btn btn-primary  -->
                 <button
                   class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
                   @click="toggleNotificationsMenu"
@@ -808,263 +765,42 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-        <h2  class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-        Listes des Agents
 
-        </h2>
-        <br>
-         <!-- this row will not appear when printing -->
-         <div class="row no-print">
-                            <div class="col-12">
+<div class="my-3 p-3 bg-body rounded shadow-sm">
+        <h6 class="border-bottom pb-2 mb-4 ">Les véhicules archivés</h6>
 
-                              <a href="{{route('print_agent')}}"  class="btn btn-primary float-right"><i class="fa fa-print"></i> Print</a>
-                       
-
-                            </div>
-                          </div>
-        <!-- <br> -->
-         <!-- With actions -->
-       
+        <div class="mt-4">
             <div class="d-flex justify-content-end mt-4">
-              
-              <form  class="d-flex mr-3 mb-1"  type="get" action="{{ url('/search') }}">
-    <div class="form-group mb-0 mr-1">
-        
-     <input type="search" name="query" class="form-control" id="search">
-    </div>
-      <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
 
-    </form>
-            </div>
+            <h3><a class="btn btn-success" href="restore-all-1"><i class="fa fa-sharp fa-solid fa-trash-arrow-up"></i> Restaurer tout</a></h3>  </div>
 
-   
-        
-            <!-- Modal  register-->
-<div class="modal fade" id="modalRegistrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter agent</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <table class="table table-border table-hover mt-2">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marque</th>
+      <th scope="col"> Modéle</th>
+      <th scope="col"> Statut</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($vehicules as $vehicule)
+    <tr>
+      <th scope="row">{{$vehicule->id}}</th>
+      <td>{{$vehicule->marque}}	</td>
+      <td>{{$vehicule->modele}}</td>
+      <td>{{$vehicule->statut}}</td>
+      <td>
+      <a href="restore-1/{{$vehicule->id}}" class="text-primary btn"><i class="fa fa-sharp fa-solid fa-trash-arrow-up"></i></a>
+
+    </td>
+    </tr>
+    @endforeach
+</tbody>
+
+</table></div>
       </div>
-      <div class="modal-body">
-      <form action="{{route('rq.create')}}" method="post" > 
-        @csrf
-      <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">id</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id">
-    
- 
-    <label for="exampleInputEmail1" class="form-label">nom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nom">
-    
-  
-    <label for="exampleInputEmail1" class="form-label">prenom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="prenom">
-    
- 
-    <label for="exampleInputEmail1" class="form-label">phone</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="phone">
-   
- 
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-    
- 
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="motPs">
-  <br>
-    <select name="departement_id" class="form-control">
-<option value="" selected disabled> Choisir un </option>
-   @foreach($re as $itemss)
-<option value="{{ $itemss->id }}">{{ $itemss->nom }}</option>
-@endforeach
-   </select>
-  </div> 
- 
-  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-  <!-- <div class="modal-footer"> -->
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-        <button type="Submit" class="btn btn-primary"> Ajouter</button>
-      <!-- </div> -->
- </form>
-      </div>
-     
-    </div>
-  </div>
-   </div> 
-   <div class="modal-header">
-   <button class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#modalRegistrar">Ajouter agent</button>
-   </div>
-        <div class="w-full overflow-hidden rounded-lg shadow-xs">
-        
-              <div class="w-full overflow-x-auto">
-             
-                <table class="w-full whitespace-no-wrap" >
-                  <thead class="bg-info">
-                    <tr
-                      class="text-xs font-semibold tracking-wide text-left text-blue-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
-                    >
-                    <th class="px-4 py-3">id</th>
-                      <th class="px-4 py-3">nom</th>
-                      <th class="px-4 py-3">prenom</th>
-                      <th class="px-4 py-3">phone</th>
-                      <th class="px-4 py-3">email</th>
-                      <th class="px-4 py-3">motPs</th>
-                      <th class="px-4 py-3">departement_id</th>
-                      
-                      <th class="px-4 py-3">Actions</th>
-                    </tr>
-                  </thead>  
-                  <tbody
-                    class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
-                  >
-                  @if(!empty($rq)&& $rq->count())
-                  @foreach ($rq as $item)
-                  <tr>
-                      <td >{{$item->id}}</td>
-                      <td >{{$item->nom}}</td>
-                      <td>{{$item->prenom}}</td>
-                      <td>{{$item->phone}}</td>
-                      <td>{{$item->email}}</td>
-                      <td >{{$item->motPs}}</td>
-                      <td >{{$item->departement_id}}</td>
-                      <td>
-                        <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal{{$item->id}}" class="text text-info btn"><i class="fa fa-pencil"></i></i></a>
-                        <a href="{{route('rq.delete',$item->id)}}" class="text-danger btn"  onclick="if(confirm('Voulez-vous supprimer ce agent?')){document.getElementById('form-{{$item->id}}').submit() }"><i class="fa fa-solid fa-trash"></i></a>
-                      </td>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier agent</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form action="{{route('rq.update')}}" method="post" >
-       
-        @csrf
-      <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">id</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" value="{{$item->id}}" readonly>
-    
- 
-    <label for="exampleInputEmail1" class="form-label">nom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nom" value="{{$item->nom}}">
- 
-    <label for="exampleInputEmail1" class="form-label">prenom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="prenom" value="{{$item->prenom}}">
-    
-  
-    <label for="exampleInputEmail1" class="form-label">phone</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="phone" value="{{$item->phone}}">
-   
 
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="{{$item->email}}">
-    
-
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="motPs" value="{{$item->motPs}}">
- 
-    <select name="departement_id" class="form-control">
-<option value="" selected disabled> Choisir un </option>
-   @foreach($re as $itemss)
-<option value="{{ $itemss->id }}">{{ $itemss->nom }}</option>
-@endforeach
-   </select>
-  </div> 
- 
-  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-  <!-- <div class="modal-footer"> -->
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-        <button type="Submit" class="btn btn-primary"> Modifier</button>
-      <!-- </div> -->
- </form>
-     
-    </div>
-  </div>
-</div>
-     </tr>
-     @endforeach
-     @else
-     <tr>
-      <td colspan="6">there ane rq.</td>
-     </tr>
-     @endif
-    
-     <!-- <tbody id="Content" >
-
-     
-    </tbody>  -->
-</table>
-
-<!-- <div class="row">{{ $rq->links() }}</div>
-              </div> -->
-              <div
-                class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
-              >
-                <span class="flex items-center col-span-3">
-                  
-
-                {{ $rq->count() }} sur {{ $rq->total() }}
-                </span>
-                <span class="col-span-2"></span>
-                <!-- Pagination -->
-                <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
-                  <nav aria-label="Table navigation">
-                  {{ $rq->links() }}
-                 
-
-                  </nav>
-                </span>
-               
-              </div>
-     
-     
-   
-<!-- <script>
-  $(document).on('keyup','search',function(){
-
-    var search_cont =$($this).val();
-    if(search_cont !=''){
-      $.agax({
-        url:'/search',
-        method:'Get',
-        data:{},
-        dataType:'json',
-        success:function(data){
-          console.log(data);
-        }
-
-      })
-    }
-  })
-
-  
-</script> -->
-
-<!-- <script type="text/javascript">
-//   $('#search').on('keyup',function(){
-//     $value=$(this).val();
-//     $.ajax({
-//       type:'get',
-//       url:"{{URL::to('search')}}",
-//       data:{'search':$value},
-
-//       success:function(data){
-//         console.log(data);
-//         $('#Content').html(data);
-//       }
-
-//     });
-//   }) -->
-</script>
-    
-   
-  

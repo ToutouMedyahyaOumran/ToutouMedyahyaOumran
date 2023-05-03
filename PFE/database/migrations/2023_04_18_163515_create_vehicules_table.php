@@ -9,12 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
     public function up(): void
     {
         Schema::create('vehicules', function (Blueprint $table) {
             $table->id();
             $table->string('marque');
-            $table->string('model');
+            $table->integer('modele');
+            $table->string('statut');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

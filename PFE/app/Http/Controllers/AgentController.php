@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Agent;
 use App\Models\departement;
 
+use Barryvdh\DomPDF\Facade\Pdf; ;
+
+
 class AgentController extends Controller
 {
     public function index(){
@@ -144,6 +147,14 @@ public function update(Request $request)
         return view('agent',compact('rq','re'));
 
 
+    }
+
+    public function print_agent(){
+        $rq= Agent::all();
+        view()->share('data',$rq);
+        $pdf= PDF::loadview('datapegawai-pdf',compact('rq'));
+        
+        return  $pdf->download('rq.pdf');
     }
   
 

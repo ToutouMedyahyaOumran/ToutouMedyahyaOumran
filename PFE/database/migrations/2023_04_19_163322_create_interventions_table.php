@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('interventions', function (Blueprint $table) {
+            
             $table->id();
-            $table->string('type');
-         
+            $table->date('Date');
+            $table->softDeletes();
             $table->timestamps();
             $table->unsignedBigInteger('support_id');
 
