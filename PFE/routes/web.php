@@ -3,7 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartementController;
-
+use App\Http\Controllers\SupportController;
 use App\Http\Controllers\PlanningController;
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +21,31 @@ Route::get('/', function () {
 });
 
 
-Route::get('/search2', [PlanningController::class, 'search2']);
-
-Route::resource('/plannings', PlanningController::class);
-
-Route::get('/search1', [DepartementController::class, 'search1']);
-Route::resource('/departements', DepartementController::class);
 
 
+
+//departement
+Route::get("/departement",[DepartementController::class,"index"]);
+
+Route::post("/Ajouter departement",[DepartementController::class,"create"])->name("dp.create");
+
+Route::post("/modifier departement",[DepartementController::class,"update"])->name("dp.update");
+
+Route::get("/departement/{id}",[DepartementController::class,"delete"])->name("dp.delete");
+
+Route::get('/searchdep',[DepartementController::class,'search'])->name('searchdep');
+
+
+
+//planning
+Route::get("/planning",[PlanningController::class,"index"]);
+
+Route::post("/Ajouter planning",[PlanningController::class,"create"])->name("pl.create");
+
+Route::post("/modifier planning",[PlanningController::class,"update"])->name("pl.update");
+
+Route::get("/planning/{id}",[PlanningController::class,"delete"])->name("pl.delete");
+
+Route::get('/searchpla',[PlanningController::class,'search'])->name('searchpla');
 
 

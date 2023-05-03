@@ -3,39 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tables - Windmill Dashboard</title>
+    <title>Mauri Urgance</title>
     <link
-      href="{{ url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap') }}"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ url('./assets/css/tailwind.output.css') }}" >
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WKdI6+VoP6jKVE2T7TlViElxuV7PstXkK/WV7+ZAgdOuV7bexCj1DwsswKq0h3p7dJt9YKo/RbLjhBCB2Jzl1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url('./assets/css/tailwind.output.css')}}" />
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+   
     <script
-      src="{{ url('https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js') }}"
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="{{ url('./assets/js/init-alpine.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="./assets/js/init-alpine.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      defer
+    ></script>
+    <script src="./assets/js/charts-lines.js" defer></script>
+  
+    <script src="./assets/js/charts-pie.js" defer></script>
   </head>
   <body>
     <div
       class="flex h-screen bg-gray-50 dark:bg-gray-900"
-      :class="{ 'overflow-hidden': isSideMenuOpen}"
+      :class="{ 'overflow-hidden': isSideMenuOpen }"
     >
       <!-- Desktop sidebar -->
       <aside
-        class="z-20 flex-shrink-0 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block"
+        class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
         <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+            class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
             href="#"
           >
-            Windmill
+
+          <!-- ml-6 text-lg font-bold text-gray-800 dark:text-gray-200 -->
+            Mauri Urgance
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="index.html"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                href="/"
               >
                 <svg
                   class="w-5 h-5"
@@ -46,12 +72,17 @@
                   stroke-width="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  
+                  
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   ></path>
                 </svg>
-                <span class="ml-4">Dashboard</span>
+                <span class="ml-4">Menu Prencipale</span>
               </a>
             </li>
           </ul>
@@ -75,13 +106,13 @@
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
                   ></path>
                 </svg>
-                <span class="ml-4">Forms</span>
+                <span class="ml-4">Gestion des agents</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
+                href=""
               >
                 <svg
                   class="w-5 h-5"
@@ -97,13 +128,13 @@
                     d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                   ></path>
                 </svg>
-                <span class="ml-4">Cards</span>
+                <span class="ml-4">Gestion des vehicules</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="charts.html"
+                href=""
               >
                 <svg
                   class="w-5 h-5"
@@ -120,13 +151,13 @@
                   ></path>
                   <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
                 </svg>
-                <span class="ml-4">Charts</span>
+                <span class="ml-4">Gestion des supports</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="buttons.html"
+                href="/"
               >
                 <svg
                   class="w-5 h-5"
@@ -142,7 +173,7 @@
                     d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                   ></path>
                 </svg>
-                <span class="ml-4">Buttons</span>
+                <span class="ml-4">Gestion des Deppartements</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -164,16 +195,12 @@
                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                   ></path>
                 </svg>
-                <span class="ml-4">Modals</span>
+                <span class="ml-4">L'archivages</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="tables.html"
               >
                 <svg
@@ -314,8 +341,12 @@
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
+              <span
+                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                aria-hidden="true"
+              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
                 href="index.html"
               >
                 <svg
@@ -449,12 +480,8 @@
               </a>
             </li>
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 href="tables.html"
               >
                 <svg
@@ -469,7 +496,7 @@
                 >
                   <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                 </svg>
-                <span class="ml-4">Departements</span>
+                <span class="ml-4">Tables</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -682,7 +709,6 @@
                     @click.away="closeNotificationsMenu"
                     @keydown.escape="closeNotificationsMenu"
                     class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700"
-                    aria-label="submenu"
                   >
                     <li class="flex">
                       <a
@@ -820,95 +846,227 @@
             </ul>
           </div>
         </header>
-        <main class="h-full pb-16 overflow-y-auto">
-         
-          
+        <main class="h-full overflow-y-auto">
+          <div class="container px-6 mx-auto grid">
+        <h2  class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+        Listes des plannigs
+        </h2>
+        <br>
+         <!-- With actions -->
+       
+            <!-- <div class="flex lg:mr-5" > -->
+            <div class="d-flex justify-content-end mt-4">
+              <form  class="d-flex ml-0 mb-1"  type="get" action="{{ url('/searchpla') }}">
+    <div class="form-group mb-0 mr-1">
+        
+<input type="search" name="query" class="form-control" id="search">
+    </div>
+<button type="submit" class="btn btn-info"> recherche<i class="fa fa-search" aria-hidden="true"></i></button>
 
-
-{{-- \DsDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS --}}
-
-
-
-
-
-
-
-
-
-            <div class="container px-6 mx-auto grid">
-              <h2
-                class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-              >
-                Formulaire
-              </h2>
-              <!-- CTA -->
-              <h2
-                class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
-                
-              >
-                <div class="flex items-center">
-                  <svg
-                    class="w-5 h-5 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    ></path>
-                  </svg>
-                  <span>Modifier un nouveau departement</span>
-                </div>
-                
-              </h2>
-            
-            
-            <div
-              class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
-            >
-            <form method="POST" action="{{ route('departements.update', $departements->id)}}" enctype="multipart/form-data">
-                    @csrf
-                    @method('PATCH')
-             
-              <label class="block text-sm">
-                <span class="text-gray-700 dark:text-gray-400">Name</span>
-                <input
-                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                  placeholder="Jane Doe"   name="nom" value="{{ $departements->nom }}"
-                />
-              </label>
-              <label class="block text-sm">
-                <span class="text-gray-700 dark:text-gray-400">Admin</span>
-                <input
-                  class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                  placeholder="Jane Doe"  name="admin_id"  value="{{ $departements->admin_id }}"
-                />
-              </label>
-                  
-          <br>
-          
-          <div>
-            <button
-              
-              type="submit"
-              class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple "
-            >
-            Modifier
-            </button>
-          </div>
-     
-        </form>  
-    
-              
+</form>
             </div>
 
+@if(isset($query))
+    <h2>Search results for"{{ $query }}"</h2>
 
-                
-                 
-          </div>
-        </main>
+    @if($rq->count() > 0)
+        <ul>
+            @foreach($rq as $item)
+                <li>{{ $item->id }}</li>
+            @endforeach
+        </ul>
+    @else
+        <p>No results found.</p>
+    @endif
+@endif
+             
+            
+            @if (session("correct"))
+       <div class="alert alert-success">{{session("correct")}}</div>
+            @endif
+
+            @if (session("icorrect"))
+       <div class="alert alert-danger">{{session("incorrect")}}</div>
+
+            @endif
+            <!-- Modal  register-->
+<div class="modal fade" id="modalRegistrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter plannigs</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div>
-  </body>
-</html>
-
+      <div class="modal-body">
+      <form action="{{route('pl.create')}}" method="post" >
+        @csrf
+      <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">id</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id">
+    
  
+    <label for="exampleInputEmail1" class="form-label">heure</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="heure">
+    
+  
+    <label for="exampleInputEmail1" class="form-label">jour</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="jour">
+    
+ 
+    <br>
+              
+   <select name="admin_id" class="form-control">
+<option value="" selected disabled> Choisir un </option>
+@foreach($rq as $itemss)
+<option value="{{ $itemss->id }}">{{ $itemss->nom }}</option>
+@endforeach
+   </select>
+
+   <select name="agent_id" class="form-control">
+    <option value="" selected disabled> Choisir un </option>
+    @foreach($ag as $itemss)
+    <option value="{{ $itemss->id }}">{{ $itemss->nom }}</option>
+    @endforeach
+       </select>
+  </div>
+
+<
+
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="Submit" class="btn btn-primary"> Ajouter</button>
+     
+ </form>
+      </div>
+     
+    </div>
+  </div>
+   </div> 
+   <div class="modal-header">
+   <button class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#modalRegistrar">Ajouter un planning</button>
+   </div>
+
+        <div class="w-full overflow-hidden rounded-lg shadow-xs">
+       
+              <div class="w-full overflow-x-auto">
+             
+                <table class="w-full whitespace-no-wrap">
+                  <thead class="bg-info">
+                    <tr
+                      class="text-xs font-semibold tracking-wide text-left text-blue-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                    >
+                    <th class="px-4 py-3">id</th>
+                      <th class="px-4 py-3">heure</th>
+                      <th class="px-4 py-3">jour</th>  
+                      <th class="px-4 py-3">admin_id</th>
+                      <th class="px-4 py-3">agent_id</th>
+                      <th class="px-4 py-3">Actions</th>
+                    </tr>
+                  </thead>  
+                  <tbody
+                    class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
+                  >
+                  @if(!empty($pl)&& $pl->count())
+                  @foreach ($pl as $item)
+                  <tr>
+                      <td >{{$item->id}}</td>
+                      <td >{{$item->heure}}</td>
+                      <td>{{$item->jour}}</td>                 
+                      <td >{{$item->admin_id}}</td>
+                      <td >{{$item->agent_id}}</td>
+                      <td>
+                        <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal{{$item->id}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="{{route('pl.delete',$item->id)}}" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></i></a>
+                      </td>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier planning</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+
+      <div class="modal-body">
+      <form action="{{route('pl.update')}}" method="post" >
+        @csrf
+      <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">id</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" value="{{$item->id}}" readonly>
+        
+ 
+    <label for="exampleInputEmail1" class="form-label">heure</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="heure" value="{{$item->heure}}">
+ 
+    <label for="exampleInputEmail1" class="form-label">jour</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="jour" value="{{$item->jour}}">
+    
+    
+    
+              
+      <select name="admin_id" class="form-control">
+        <option value="" selected disabled> Choisir un </option>
+        @foreach($rq as $items)
+        <option value="{{ $items->id }}">{{ $items->nom }}</option>
+        @endforeach
+      </select>
+
+      <select name="agent_id" class="form-control">
+        <option value="" selected disabled> Choisir un </option>
+        @foreach($ag as $items)
+        <option value="{{ $items->id }}">{{ $items->nom }}</option>
+        @endforeach
+      </select>
+
+  </div> 
+ 
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="Submit" class="btn btn-primary"> Modifier</button>
+   
+ </form>
+     
+    </div>
+  </div>
+</div>
+
+
+
+     </tr>
+     @endforeach
+     @else
+     <tr>
+      <td colspan="6">there ane sp.</td>
+     </tr>
+     @endif
+    
+     
+</table>
+
+
+              <div
+                class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+              >
+                <span class="flex items-center col-span-3">
+                  
+
+                {{ $pl->count() }} sur {{ $pl->total() }}
+                </span>
+                <span class="col-span-2"></span>
+                <!-- Pagination -->
+                <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
+                  <nav aria-label="Table navigation">
+                  {{ $pl->links() }}
+                 
+
+                  </nav>
+                </span>
+               
+              </div>
+     
+     
+   
+
+

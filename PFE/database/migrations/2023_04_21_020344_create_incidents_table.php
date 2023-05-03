@@ -18,7 +18,7 @@ class CreateIncidentsTable extends Migration
             $table->string('image');
             $table->string('MRZ');
             $table->timestamps();
-
+            
             // $table->integer('intervention_id');
             $table->unsignedBigInteger('intervention_id');
             $table->foreign('intervention_id')->references('id')->on('interventions')->onDelete('cascade');
