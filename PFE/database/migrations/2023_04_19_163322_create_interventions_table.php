@@ -17,12 +17,12 @@ return new class extends Migration
             $table->date('Date');
             $table->softDeletes();
             $table->timestamps();
-            $table->unsignedBigInteger('support_id');
 
+            
+            $table->unsignedBigInteger('support_id');
             $table->foreign('support_id')->references('id')->on('supports')->onDelete('cascade');
 
             $table->unsignedBigInteger('vehicules_id');
-
             $table->foreign('vehicules_id')->references('id')->on('vehicules')->onDelete('cascade');
             
         });

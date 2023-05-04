@@ -20,9 +20,15 @@ return new class extends Migration
             $table->string('motPs');
             $table->timestamps();
 
+             // $table->integer('admin_id');
+             $table->unsignedBigInteger('admin_id');
+             $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
+          
+            // $table->integer('departement_id');
             $table->unsignedBigInteger('departement_id');
-
             $table->foreign('departement_id')->references('id')->on('departements')->onDelete('cascade');
+       
+           
         });
     }
 
