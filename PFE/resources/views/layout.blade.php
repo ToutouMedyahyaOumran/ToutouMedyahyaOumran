@@ -3,29 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mauriUrgence</title>
+    <title>Mauri Urgance</title>
     <link
-      href="{{ url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap') }}"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ url('./assets/css/tailwind.output.css') }}" />
+    <link rel="stylesheet" href="{{url('./assets/css/tailwind.output.css')}}" />
+   
     <script
-      src="{{ url('https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js') }}"
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
-    <script src="{{ url('./assets/js/init-alpine.js') }}"></script>
+    <script src="./assets/js/init-alpine.js"></script>
     <link
       rel="stylesheet"
-      href="{{ url('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css') }}"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WKdI6+VoP6jKVE2T7TlViElxuV7PstXkK/WV7+ZAgdOuV7bexCj1DwsswKq0h3p7dJt9YKo/RbLjhBCB2Jzl1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script
-      src="{{ url('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js') }}"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       defer
     ></script>
-    <script src="{{ url('./assets/js/charts-lines.js') }}" defer></script>
-    <script src="{{ url('./assets/js/charts-pie.js') }}" defer></script>
+    <script src="./assets/js/charts-lines.js" defer></script>
+    <script src="./assets/js/charts-pie.js" defer></script>
   </head>
   <body>
     <div
@@ -38,10 +37,12 @@
       >
         <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-            href="#"
+            class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+            href="/"
           >
-            mauriUrgence
+
+          <!-- ml-6 text-lg font-bold text-gray-800 dark:text-gray-200 -->
+            Mauri Urgance
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
@@ -51,7 +52,36 @@
               ></span>
               <a
                 class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
-                href="index.html"
+                href="/"
+              >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  
+                  
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                
+                >
+                  <path
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+                <span class="ml-4">Menu Prencipale</span>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="/agent"
               >
                 <svg
                   class="w-5 h-5"
@@ -64,18 +94,16 @@
                   stroke="currentColor"
                 >
                   <path
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
                   ></path>
                 </svg>
-                <span class="ml-4">Acceuil</span>
+                <span class="ml-4">Gestion des agents</span>
               </a>
             </li>
-          </ul>
-          <ul>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="forms.html"
+                href=""
               >
                 <svg
                   class="w-5 h-5"
@@ -87,39 +115,17 @@
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"></path>
-                  <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd"></path>
-                </svg>                </svg>
-                <span class="ml-4">Support d'accueil</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                <path
-                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-              ></path>
+                  <path
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  ></path>
                 </svg>
-                <span class="ml-4">Agents</span>
+                <span class="ml-4">Gestion des vehicules</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="charts.html"
+                href="/support"
               >
                 <svg
                   class="w-5 h-5"
@@ -136,7 +142,7 @@
                   ></path>
                   <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
                 </svg>
-                <span class="ml-4">Véhicules</span>
+                <span class="ml-4">Gestion des supports</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -158,7 +164,7 @@
                     d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                   ></path>
                 </svg>
-                <span class="ml-4">Buttons</span>
+                <span class="ml-4">Gestion des Deppartements</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -180,7 +186,7 @@
                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                   ></path>
                 </svg>
-                <span class="ml-4">Modals</span>
+                <span class="ml-4">L'archivages</span>
               </a>
             </li>
             <li class="relative px-6 py-3">
@@ -348,7 +354,7 @@
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   ></path>
                 </svg>
-                <span class="ml-4">,mauriUrgence</span>
+                <span class="ml-4">Dashboard</span>
               </a>
             </li>
           </ul>
@@ -832,269 +838,463 @@
           </div>
         </header>
         <main class="h-full overflow-y-auto">
+          <div class="container px-6 mx-auto grid">
+        <h2  class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+         Statistiques des agents
 
-              <br>
-              <br>
-              <h2><b> Statistiques des agents </b></h2>
-
-              <!-- Cards -->
-              <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                <!-- Card -->
-                <div
-                  class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-                >
-             
-                  <div
-                    class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
-                  >
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                        d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                    >
-                      Total des agents
-                    </p>
-                    <p
-                      class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                    >
-                      170
-                    </p>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div
-                  class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-                >
-                  <div
-                    class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
-                  >
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-                    ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                    >
-                      Agents en fonction
-                    </p>
-                    <p
-                      class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                    >
-                      130
-                    </p>
-                  </div>
-                </div>
-                <!-- Card -->
-                <div
-                  class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-                >
-                  <div
-                      class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
-                    >
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
-                    ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-sm font-medium text-gray-600 dark:text-red-400"
-                    >
-                      Agents en conges
-                    </p>
-                    <p
-                      class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                    >
-                      40
-                    </p>
-                  </div>
-                </div>
-                <!-- Card -->
-                
-            </div>
-  
-            <!-- New Table -->
+        </h2>
 
             
-              
-            <h2><b> Statistiques des incident </b></h2>
-
-                  <!-- Cards -->
-                    <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                    <!-- Cards -->
-                    <div
-                    class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-                    >
-                                <div
-                      class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
-                    >
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <p
-                        class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                      >
-                        Total d'incident
-                      </p>
-                      <p
-                        class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                      >
-                        124
-                      </p>
-                    </div>
-                  </div>
-
-                <!-- Card -->
-                <div
-                  class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+            <!-- CTA -->
+            <!-- <a
+              class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+             
+            >
+              <div class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
                 >
-                  <div
-                    class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
-                  ><svg viewBox="0 0 640 512" width="30" title="car-crash"><path d="M143.25 220.81l-12.42 46.37c-3.01 11.25-3.63 22.89-2.41 34.39l-35.2 28.98c-6.57 5.41-16.31-.43-14.62-8.77l15.44-76.68c1.06-5.26-2.66-10.28-8-10.79l-77.86-7.55c-8.47-.82-11.23-11.83-4.14-16.54l65.15-43.3c4.46-2.97 5.38-9.15 1.98-13.29L21.46 93.22c-5.41-6.57.43-16.3 8.78-14.62l76.68 15.44c5.26 1.06 10.28-2.66 10.8-8l7.55-77.86c.82-8.48 11.83-11.23 16.55-4.14l43.3 65.14c2.97 4.46 9.15 5.38 13.29 1.98l60.4-49.71c6.57-5.41 16.3.43 14.62 8.77L262.1 86.38c-2.71 3.05-5.43 6.09-7.91 9.4l-32.15 42.97-10.71 14.32c-32.73 8.76-59.18 34.53-68.08 67.74zm494.57 132.51l-12.42 46.36c-3.13 11.68-9.38 21.61-17.55 29.36a66.876 66.876 0 0 1-8.76 7l-13.99 52.23c-1.14 4.27-3.1 8.1-5.65 11.38-7.67 9.84-20.74 14.68-33.54 11.25L515 502.62c-17.07-4.57-27.2-22.12-22.63-39.19l8.28-30.91-247.28-66.26-8.28 30.91c-4.57 17.07-22.12 27.2-39.19 22.63l-30.91-8.28c-12.8-3.43-21.7-14.16-23.42-26.51-.57-4.12-.35-8.42.79-12.68l13.99-52.23a66.62 66.62 0 0 1-4.09-10.45c-3.2-10.79-3.65-22.52-.52-34.2l12.42-46.37c5.31-19.8 19.36-34.83 36.89-42.21a64.336 64.336 0 0 1 18.49-4.72l18.13-24.23 32.15-42.97c3.45-4.61 7.19-8.9 11.2-12.84 8-7.89 17.03-14.44 26.74-19.51 4.86-2.54 9.89-4.71 15.05-6.49 10.33-3.58 21.19-5.63 32.24-6.04 11.05-.41 22.31.82 33.43 3.8l122.68 32.87c11.12 2.98 21.48 7.54 30.85 13.43a111.11 111.11 0 0 1 34.69 34.5c8.82 13.88 14.64 29.84 16.68 46.99l6.36 53.29 3.59 30.05a64.49 64.49 0 0 1 22.74 29.93c4.39 11.88 5.29 25.19 1.75 38.39zM255.58 234.34c-18.55-4.97-34.21 4.04-39.17 22.53-4.96 18.49 4.11 34.12 22.65 39.09 18.55 4.97 45.54 15.51 50.49-2.98 4.96-18.49-15.43-53.67-33.97-58.64zm290.61 28.17l-6.36-53.29c-.58-4.87-1.89-9.53-3.82-13.86-5.8-12.99-17.2-23.01-31.42-26.82l-122.68-32.87a48.008 48.008 0 0 0-50.86 17.61l-32.15 42.97 172 46.08 75.29 20.18zm18.49 54.65c-18.55-4.97-53.8 15.31-58.75 33.79-4.95 18.49 23.69 22.86 42.24 27.83 18.55 4.97 34.21-4.04 39.17-22.53 4.95-18.48-4.11-34.12-22.66-39.09z"></path></svg>
-                  </div>
-                  <div>
-                    <p
-                      class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                    >
-                      Incendies
-                    </p>
-                    <p
-                      class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                    >
-                      109
-                    </p>
-                  </div>
-                </div>
-                <!-- Card -->
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <span></span>
+              </div>
+              <span></span>
+            </a> -->
+            <!-- Cards -->
+            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+              <!-- Card -->
+             
+            
+             
+              <!-- Card -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
                 <div
+                  class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
+                >
+                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    
+                    Total Agent
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                  {{ $rm }}  
+                  </p>
+                </div>
+              </div>
+            <!-- CTA -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
+                >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    Agents en fonction 
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    $ 46,760.89
+                  </p>
+                </div>
+              </div>
+
+           <!-- CTA -->
+              <div
                 class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
               >
                 <div
                   class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
                 >
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>                    </svg>
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
                 </div>
                 <div>
                   <p
                     class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
                   >
-                    Accidents de voitures
+                  Agents en congé
                   </p>
                   <p
                     class="text-lg font-semibold text-gray-700 dark:text-gray-200"
                   >
-                    15
+                    6389
+   
+                  </p>
+                </div>
+              </div>
+              <!-- Card -->
+
+              
+
+              
+
+
+
+              
+              <!-- <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    Pending contacts
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    35
+                  </p>
+                </div> -->
+              </div>
+            </div>
+
+
+
+            <div class="container px-6 mx-auto grid">
+        <h2  class="my-6 text-2xl  text-gray-700 dark:text-gray-200">
+        Statistiques des incidents
+
+        </h2>
+
+            
+            <!-- CTA -->
+            <!-- <a
+              class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+             
+            >
+              <div class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <span></span>
+              </div>
+              <span></span>
+            </a> -->
+            <!-- Cards -->
+            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+              <!-- Card -->
+             
+            
+             
+              <!-- Card -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
+                >
+                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    
+                    Total des incidents
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    376
+                  </p>
+                </div>
+              </div>
+            <!-- CTA -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
+                >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                  Accident
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    $ 46,760.89
                   </p>
                 </div>
               </div>
 
+           <!-- CTA -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+</svg>
 
-
-
-
-                
-                <!-- Card -->
-                
-              </div>
-
-  
-                <h2><b> Statistiques des vehicules </b></h2>
-
-                <!-- Cards -->
-                <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                  <!-- Card -->
-                  <div
-                    class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
                   >
-                  <div
+                  Incendies 
+                  
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    6389
+                  </p>
+                </div>
+              </div>
+              <!-- Card -->
+
+              
+
+              
+
+
+
+              
+              <!-- <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    Pending contacts
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    35
+                  </p>
+                </div> -->
+              </div>
+            </div>
+
+
+
+
+            <div class="container px-6 mx-auto grid">
+        <h2  class="my-6 text-2xl  text-gray-700 dark:text-gray-200">
+         Statistiques des vehicules
+
+        </h2>
+
+            
+            <!-- CTA -->
+            <!-- <a
+              class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+             
+            >
+              <div class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+                <span></span>
+              </div>
+              <span></span>
+            </a> -->
+            <!-- Cards -->
+            <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+              <!-- Card -->
+             
+            
+             
+              <!-- Card -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
                   class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500"
                 >
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>
-                      </svg>
-                    </div>
-                    <div>
-                      <p
-                        class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                      >
-                        Total des vehicules
-                      </p>
-                      <p
-                        class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                      >
-                        124
-                      </p>
-                    </div>
-                  </div>
-                  <!-- Card -->
-                  <div
-                    class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-                  >
-                    <div
-                      class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
-                    >
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>   </svg>
-                    </div>
-                    <div>
-                      <p
-                        class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                      >
-                        Vehicules en fonction
-                      </p>
-                      <p
-                        class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                      >
-                        109
-                      </p>
-                    </div>
-                  </div>
-                  <!-- Card -->
-                  <div
-                    class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+</svg>
+
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
                   >
                     
-                    <div
-                      class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
-                    >
-                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>
-                    </div>
-                    <div>
-                      <p
-                        class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
-                      >
-                        Vehicules en panne
-                      </p>
-                      <p
-                        class="text-lg font-semibold text-gray-700 dark:text-gray-200"
-                      >
-                        15
-                      </p>
-                    </div>
-                  </div>
-                  <!-- Card -->
-                  
+                    Total des Vehicules
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    376
+                  </p>
+                </div>
+              </div>
+            <!-- CTA -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+</svg>
+
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    Vehicules en fonction
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    $ 46,760.89
+                  </p>
+                </div>
+              </div>
+
+           <!-- CTA -->
+              <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500"
+                >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+</svg>
+
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                  Vehicules en panne
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    6389
+                  </p>
+                </div>
+              </div>
+              <!-- Card -->
+
+              
+
+              
+
+
+
+              
+              <!-- <div
+                class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+              >
+                <div
+                  class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
+                  >
+                    Pending contacts
+                  </p>
+                  <p
+                    class="text-lg font-semibold text-gray-700 dark:text-gray-200"
+                  >
+                    35
+                  </p>
+                </div> -->
+              </div>
             </div>
-  
-                
-                
-             
 
+            
 
-
+            <!-- New Table -->
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
                 <table class="w-full whitespace-no-wrap">
@@ -1580,66 +1780,9 @@
               </div>
             </div>
 
-            <!-- Charts -->
-            <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Charts
-            </h2>
-            <div class="grid gap-6 mb-8 md:grid-cols-2">
-              <div
-                class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Revenue
-                </h4>
-                <canvas id="pie"></canvas>
-                <div
-                  class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
-                >
+         
                   <!-- Chart legend -->
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-blue-500 rounded-full"
-                    ></span>
-                    <span>Shirts</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"
-                    ></span>
-                    <span>Shoes</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"
-                    ></span>
-                    <span>Bags</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
-              >
-                <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
-                  Traffic
-                </h4>
-                <canvas id="line"></canvas>
-                <div
-                  class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400"
-                >
-                  <!-- Chart legend -->
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-teal-600 rounded-full"
-                    ></span>
-                    <span>Organic</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span
-                      class="inline-block w-3 h-3 mr-1 bg-purple-600 rounded-full"
-                    ></span>
-                    <span>Paid</span>
+                  
                   </div>
                 </div>
               </div>
