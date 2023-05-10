@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('affecters', function (Blueprint $table) {
             $table->id();
-            $table->integer('Date');
+          
 
             $table->timestamps();
 

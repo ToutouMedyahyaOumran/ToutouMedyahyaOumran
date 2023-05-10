@@ -1,5 +1,6 @@
 import './bootstrap';
 
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -7,15 +8,18 @@ import './bootstrap';
  */
 
  require('./bootstrap');
+ z
+ 
 
  window.Vue = require('vue');
  import moment from 'moment';
  import { Form, HasError, AlertError } from 'vform';
+
  
  import Gate from "./Gate";
  Vue.prototype.$gate = new Gate(window.user);
  
- 
+
  import swal from 'sweetalert2'
  window.swal = swal;
  

@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="../../public/assets/css/style.css">
     <script src="jquery-3.6.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-WKdI6+VoP6jKVE2T7TlViElxuV7PstXkK/WV7+ZAgdOuV7bexCj1DwsswKq0h3p7dJt9YKo/RbLjhBCB2Jzl1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url('./assets/css/tailwind.output.css')}}" />
     <link rel="stylesheet" href="/fontawesome/css/all.css">
@@ -35,7 +36,7 @@
     <script src="./assets/js/charts-pie.js" defer></script>
   </head>
   <body>
-  <div
+    <div
       class="flex h-screen bg-gray-50 dark:bg-gray-900"
       :class="{ 'overflow-hidden': isSideMenuOpen }"
     >
@@ -43,13 +44,14 @@
       <aside
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400 ">
-          
+        <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+            class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
             href="#"
           >
-            Mauri_Urgence
+
+          <!-- ml-6 text-lg font-bold text-gray-800 dark:text-gray-200 -->
+            Mauri Urgance
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
@@ -70,6 +72,11 @@
                   stroke-width="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  
+                  
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                
                 >
                   <path
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
@@ -105,7 +112,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="cards.html"
+                href=""
               >
                 <svg
                   class="w-5 h-5"
@@ -127,37 +134,7 @@
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="charts.html"
-              >
-                <svg
-                  class="w-5 h-5"
-                  aria-hidden="true"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>
-
-                </svg>
-                <span class="ml-4">Gestion des supports</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="buttons.html"
-              >
-              <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20" height="20"><path d="M22.485,10.975,12,17.267,1.515,10.975A1,1,0,1,0,.486,12.69l11,6.6a1,1,0,0,0,1.03,0l11-6.6a1,1,0,1,0-1.029-1.715Z"/><path d="M22.485,15.543,12,21.834,1.515,15.543A1,1,0,1,0,.486,17.258l11,6.6a1,1,0,0,0,1.03,0l11-6.6a1,1,0,1,0-1.029-1.715Z"/><path d="M12,14.773a2.976,2.976,0,0,1-1.531-.425L.485,8.357a1,1,0,0,1,0-1.714L10.469.652a2.973,2.973,0,0,1,3.062,0l9.984,5.991a1,1,0,0,1,0,1.714l-9.984,5.991A2.976,2.976,0,0,1,12,14.773ZM2.944,7.5,11.5,12.633a.974.974,0,0,0,1,0L21.056,7.5,12.5,2.367a.974.974,0,0,0-1,0h0Z"/></svg>
-                <span class="ml-4">Archivage</span>
-              </a>
-            </li>
-            <li class="relative px-6 py-3">
-              <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                href="modals.html"
+                href=""
               >
                 <svg
                   class="w-5 h-5"
@@ -170,7 +147,30 @@
                   stroke="currentColor"
                 >
                   <path
-                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+                  ></path>
+                  <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                </svg>
+                <span class="ml-4">Gestion des supports</span>
+              </a>
+            </li>
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="/"
+              >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                   ></path>
                 </svg>
                 <span class="ml-4">Gestion des Deppartements</span>
@@ -195,10 +195,29 @@
                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                   ></path>
                 </svg>
-                <span class="ml-4">Gestion des plannig</span>
+                <span class="ml-4">L'archivages</span>
               </a>
             </li>
-           
+            <li class="relative px-6 py-3">
+              <a
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                href="tables.html"
+              >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                </svg>
+                <span class="ml-4">Tables</span>
+              </a>
+            </li>
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -251,21 +270,42 @@
                   >
                     <a class="w-full" href="pages/login.html">Login</a>
                   </li>
-                 
-                 
-                 
+                  <li
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                  >
+                    <a class="w-full" href="pages/create-account.html">
+                      Create account
+                    </a>
+                  </li>
+                  <li
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                  >
+                    <a class="w-full" href="pages/forgot-password.html">
+                      Forgot password
+                    </a>
+                  </li>
+                  <li
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                  >
+                    <a class="w-full" href="pages/404.html">404</a>
+                  </li>
+                  <li
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                  >
+                    <a class="w-full" href="pages/blank.html">Blank</a>
+                  </li>
                 </ul>
               </template>
             </li>
           </ul>
-          <!-- <div class="px-6 my-6">
+          <div class="px-6 my-6">
             <button
               class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
             >
               Create account
               <span class="ml-2" aria-hidden="true">+</span>
             </button>
-          </div> -->
+          </div>
         </div>
       </aside>
       <!-- Mobile sidebar -->
@@ -550,9 +590,9 @@
         </div>
       </aside>
       <div class="flex flex-col flex-1 w-full">
-        <header class="z-10 py-4 btn btn-primary shadow-md dark:bg-gray-800">
+        <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
           <div
-            class="container flex items-center justify-between h-4 px-6 mx-auto text-purple-600 dark:text-purple-300"
+            class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
           >
             <!-- Mobile hamburger -->
             <button
@@ -574,8 +614,8 @@
               </svg>
             </button>
             <!-- Search input -->
-            <div class="flex justify-center flex-1 lg:mr-32 ">
-              <!-- <div
+            <div class="flex justify-center flex-1 lg:mr-32">
+              <div
                 class="relative w-full max-w-xl mr-6 focus-within:text-purple-500"
               >
                 <div class="absolute inset-y-0 flex items-center pl-2">
@@ -598,12 +638,11 @@
                   placeholder="Search for projects"
                   aria-label="Search"
                 />
-              </div> -->
+              </div>
             </div>
             <ul class="flex items-center flex-shrink-0 space-x-6">
               <!-- Theme toggler -->
               <li class="flex">
-             
                 <button
                   class="rounded-md focus:outline-none focus:shadow-outline-purple"
                   @click="toggleTheme"
@@ -639,7 +678,6 @@
               </li>
               <!-- Notifications menu -->
               <li class="relative">
-                 <!-- btn btn-primary  -->
                 <button
                   class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
                   @click="toggleNotificationsMenu"
@@ -811,84 +849,92 @@
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
         <h2  class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-        Listes des Agents
-
+        Listes des plannigs
         </h2>
         <br>
-         <!-- this row will not appear when printing -->
-         <div class="row no-print">
-                            <div class="col-12">
-
-                              <a href="{{route('print_agent')}}"  class="btn btn-primary float-right"><i class="fa fa-print"></i> Print</a>
-                       
-
-                            </div>
-                          </div>
-        <!-- <br> -->
          <!-- With actions -->
        
+            <!-- <div class="flex lg:mr-5" > -->
             <div class="d-flex justify-content-end mt-4">
-              
-              <form  class="d-flex mr-3 mb-1"  type="get" action="{{ url('/search') }}">
+              <form  class="d-flex ml-0 mb-1"  type="get" action="{{ url('/searchpla') }}">
     <div class="form-group mb-0 mr-1">
         
-     <input type="search" name="query" class="form-control" id="search">
+<input type="search" name="query" class="form-control" id="search">
     </div>
-      <button type="submit" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+<button type="submit" class="btn btn-info"> recherche<i class="fa fa-search" aria-hidden="true"></i></button>
 
-    </form>
+</form>
             </div>
 
-   
-        
+@if(isset($query))
+    <h2>Search results for"{{ $query }}"</h2>
+
+    @if($rq->count() > 0)
+        <ul>
+            @foreach($rq as $item)
+                <li>{{ $item->id }}</li>
+            @endforeach
+        </ul>
+    @else
+        <p>No results found.</p>
+    @endif
+@endif
+             
+            
+            @if (session("correct"))
+       <div class="alert alert-success">{{session("correct")}}</div>
+            @endif
+
+            @if (session("icorrect"))
+       <div class="alert alert-danger">{{session("incorrect")}}</div>
+
+            @endif
             <!-- Modal  register-->
 <div class="modal fade" id="modalRegistrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter agent</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter un plannig</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="{{route('rq.create')}}" method="post" > 
+      <form action="{{route('pl.create')}}" method="post" >
         @csrf
       <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">id</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id">
     
  
-    <label for="exampleInputEmail1" class="form-label">nom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nom">
+    <label for="exampleInputEmail1" class="form-label">heure</label>
+    <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="heurs">
     
   
-    <label for="exampleInputEmail1" class="form-label">prenom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="prenom">
+    <label for="exampleInputEmail1" class="form-label">jour</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="jours">
     
  
-    <label for="exampleInputEmail1" class="form-label">phone</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="phone">
-   
- 
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-    
- 
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="motPs">
-  <br>
-    <select name="departement_id" class="form-control">
+    <br>
+              
+   <select name="admin_id" class="form-control">
 <option value="" selected disabled> Choisir un </option>
-   @foreach($re as $itemss)
+@foreach($rq as $itemss)
 <option value="{{ $itemss->id }}">{{ $itemss->nom }}</option>
 @endforeach
    </select>
-  </div> 
- 
-  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-  <!-- <div class="modal-footer"> -->
+
+   <select name="agent_id" class="form-control">
+    <option value="" selected disabled> Choisir un </option>
+    @foreach($ag as $itemss)
+    <option value="{{ $itemss->id }}">{{ $itemss->nom }}</option>
+    @endforeach
+       </select>
+  </div>
+
+<
+
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         <button type="Submit" class="btn btn-primary"> Ajouter</button>
-      <!-- </div> -->
+     
  </form>
       </div>
      
@@ -896,44 +942,42 @@
   </div>
    </div> 
    <div class="modal-header">
-   <button class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#modalRegistrar">Ajouter agent</button>
+   <button class="btn btn-primary btn-sm"  data-bs-toggle="modal" data-bs-target="#modalRegistrar">Ajouter un planning</button>
    </div>
+
         <div class="w-full overflow-hidden rounded-lg shadow-xs">
-        
+       
               <div class="w-full overflow-x-auto">
              
-                <table class="w-full whitespace-no-wrap" >
+                <table class="w-full whitespace-no-wrap">
                   <thead class="bg-info">
                     <tr
                       class="text-xs font-semibold tracking-wide text-left text-blue-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
                     >
                     <th class="px-4 py-3">id</th>
-                      <th class="px-4 py-3">nom</th>
-                      <th class="px-4 py-3">prenom</th>
-                      <th class="px-4 py-3">phone</th>
-                      <th class="px-4 py-3">email</th>
-                      <!-- <th class="px-4 py-3">motPs</th> -->
-                      <th class="px-4 py-3">departement_id</th>
+                      <th class="px-4 py-3">heurs</th>
+                      <th class="px-4 py-3">jours</th>  
+                      <th class="px-4 py-3">admin_id</th>
+                      <th class="px-4 py-3">agent_id</th>
                       <th class="px-4 py-3">Actions</th>
                     </tr>
                   </thead>  
                   <tbody
                     class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
                   >
-                  @if(!empty($rq)&& $rq->count())
-                  @foreach ($rq as $item)
+                  @if(!empty($pl)&& $pl->count())
+                  @foreach ($pl as $item)
                   <tr>
                       <td >{{$item->id}}</td>
-                      <td >{{$item->nom}}</td>
-                      <td>{{$item->prenom}}</td>
-                      <td>{{$item->phone}}</td>
-                      <td>{{$item->email}}</td>
-                      <!-- <td >{{$item->motPs}}</td> -->
-                      <td >{{$item->departement_id}}</td>
+                      <td >{{$item->heurs}}</td>
+                      <td>{{$item->jours}}</td>                 
+                      <td >{{$item->admin_id}}</td>
+                      <td >{{$item->agent_id}}</td>
                       <td>
-                        <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal{{$item->id}}" class="text text-info btn"><i class="fa fa-pencil"></i></i></a>
-                        <a href="{{route('rq.delete',$item->id)}}" class="text-danger btn"  onclick="if(confirm('Voulez-vous supprimer ce agent?')){document.getElementById('form-{{$item->id}}').submit() }"><i class="fa fa-solid fa-trash"></i></a>
+                        <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal{{$item->id}}" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="{{route('pl.delete',$item->id)}}" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></i></a>
                       </td>
+
 
 
 <!-- Modal -->
@@ -941,83 +985,80 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier agent</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modifier planning</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
+
       <div class="modal-body">
-      <form action="{{route('rq.update')}}" method="post" >
-       
+      <form action="{{route('pl.update')}}" method="post" >
         @csrf
       <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">id</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" value="{{$item->id}}" readonly>
-    
+        
  
-    <label for="exampleInputEmail1" class="form-label">nom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nom" value="{{$item->nom}}">
+    <label for="exampleInputEmail1" class="form-label">heure</label>
+    <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="heure" value="{{$item->heure}}">
  
-    <label for="exampleInputEmail1" class="form-label">prenom</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="prenom" value="{{$item->prenom}}">
+    <label for="exampleInputEmail1" class="form-label">jour</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="jour" value="{{$item->jour}}">
     
-  
-    <label for="exampleInputEmail1" class="form-label">phone</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="phone" value="{{$item->phone}}">
-   
+    
+    
+              
+      <select name="admin_id" class="form-control">
+        <option value="" selected disabled> Choisir un </option>
+        @foreach($rq as $items)
+        <option value="{{ $items->id }}">{{ $items->nom }}</option>
+        @endforeach
+      </select>
 
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="{{$item->email}}">
-    
+      <select name="agent_id" class="form-control">
+        <option value="" selected disabled> Choisir un </option>
+        @foreach($ag as $items)
+        <option value="{{ $items->id }}">{{ $items->nom }}</option>
+        @endforeach
+      </select>
 
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="motPs" value="{{$item->motPs}}">
- 
-    <select name="departement_id" class="form-control">
-<option value="" selected disabled> Choisir un </option>
-   @foreach($re as $itemss)
-<option value="{{ $itemss->id }}">{{ $itemss->nom }}</option>
-@endforeach
-   </select>
   </div> 
  
-  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-  <!-- <div class="modal-footer"> -->
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
         <button type="Submit" class="btn btn-primary"> Modifier</button>
-      <!-- </div> -->
+   
  </form>
      
     </div>
   </div>
 </div>
+
+
+
      </tr>
      @endforeach
      @else
      <tr>
-      <td colspan="6">there ane rq.</td>
+      <td colspan="6">there ane sp.</td>
      </tr>
      @endif
     
-     <!-- <tbody id="Content" >
-
      
-    </tbody>  -->
 </table>
 
-<!-- <div class="row">{{ $rq->links() }}</div>
-              </div> -->
+
               <div
                 class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
               >
                 <span class="flex items-center col-span-3">
                   
 
-                {{ $rq->count() }} sur {{ $rq->total() }}
+                {{ $pl->count() }} sur {{ $pl->total() }}
                 </span>
                 <span class="col-span-2"></span>
                 <!-- Pagination -->
                 <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
                   <nav aria-label="Table navigation">
-                  {{ $rq->links() }}
+                  {{ $pl->links() }}
                  
 
                   </nav>
@@ -1027,43 +1068,4 @@
      
      
    
-<!-- <script>
-  $(document).on('keyup','search',function(){
 
-    var search_cont =$($this).val();
-    if(search_cont !=''){
-      $.agax({
-        url:'/search',
-        method:'Get',
-        data:{},
-        dataType:'json',
-        success:function(data){
-          console.log(data);
-        }
-
-      })
-    }
-  })
-
-  
-</script> -->
-
-<!-- <script type="text/javascript">
-//   $('#search').on('keyup',function(){
-//     $value=$(this).val();
-//     $.ajax({
-//       type:'get',
-//       url:"{{URL::to('search')}}",
-//       data:{'search':$value},
-
-//       success:function(data){
-//         console.log(data);
-//         $('#Content').html(data);
-//       }
-
-//     });
-//   }) -->
-</script>
-    
-   
-  

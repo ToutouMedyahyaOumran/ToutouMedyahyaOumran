@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Agent;
+use App\Models\Affecter;
 use App\Models\Intervention;
 use App\Models\Support;
 use App\Models\Vehicule;
@@ -13,9 +16,10 @@ class InterventionController extends Controller
         $interventions = Intervention::orderBy("id", "asc")->paginate(5);
         $vehicules = Vehicule::all();
         $support = Support::all();
+        $agents = Agent::all();
 
 
-        return view('intervention', compact('interventions', 'vehicules','support'));
+        return view('intervention', compact('interventions', 'vehicules','support', 'agents'));
     }
 
 
@@ -31,8 +35,11 @@ class InterventionController extends Controller
         // Vehicule::create($request->all());
 
         Intervention::create($request->all());
-
-
+ //4e how li 6ara medyahaya
+        $agent_vehicule = new Affecter;
+        $agent_vehicule->agent_id  = $request->agent_id;
+        $agent_vehicule->vehicule_id =$request->vehicules_id;
+        $agent_vehicule->save();
         return back()->with("succes", "vehicule ajouté avec succés !");
 
     }

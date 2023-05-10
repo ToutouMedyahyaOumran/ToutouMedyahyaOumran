@@ -20,7 +20,7 @@ class LoginController extends Controller
     }
 
     public function loginAdmim(Request $request){
-        // dd( $request);
+         dd( $request);
         if(Auth::attempt(($request->only('email','password')))){
             return redirect('/dachebord');
 

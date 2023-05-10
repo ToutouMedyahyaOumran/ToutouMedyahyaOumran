@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Agent;
 use App\Models\departement;
+use Illuminate\Support\Facades\Hash;
 
 use Barryvdh\DomPDF\Facade\Pdf; ;
 
@@ -33,8 +34,22 @@ class AgentController extends Controller
         'motPs' => 'required',
         'departement_id' => 'required'
     ]);
+
+    Agent::create([
+        "id"=>$request->id,
+        "nom" => $request->nom,
+        "prenom" => $request->prenom,
+        "phone" => $request->phone,
+        "email" => $request->email,
+        "motPs" => Hash::make($request->motPs),
+       
+        "departement_id" => $request->departement_id,
+
+
+
+    ]);
     
-    Agent::create($request->all());  
+    // Agent::create($request->all());  
     return back()->with("success", "La structure est ajoutée avec succés !"); 
     // $rq = Agent::create($validateData);
     //     return redirect('/Ajouter agent');
@@ -85,7 +100,8 @@ public function update(Request $request)
         'prenom' => 'required',
         'phone' => 'required',
         'email' => 'required',
-        'motPs' => 'required',
+        'motPs' => 'required|',
+        
         'departement_id' => 'required',
 
     ]);
@@ -94,7 +110,8 @@ public function update(Request $request)
     $rq->prenom=$request->prenom;
     $rq->phone=$request->phone;
     $rq->email=$request->email;
-    $rq->motPs=$request->motPs;
+    $rq->motPs= Hash::make($request->motPs);
+    
     $rq->departement_id=$request->departement_id;
     
     $rq->update();

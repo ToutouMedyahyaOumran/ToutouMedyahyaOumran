@@ -3,10 +3,11 @@
 
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\SupportController;
-use App\Http\Controllers\DachebordController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PlanningController;
+use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\VehiculeController;
 use App\Http\Controllers\InterventionController;
+use App\Http\Controllers\AuthController;
 
 use App\Models\Agent;
 use Illuminate\Support\Facades\Route;
@@ -21,12 +22,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+  
 // Route::get('/', function () {
-//     return view('layout');
+//     return view('welcome');
 // });
 
-Route::get("/dachebord",[DachebordController::class,"index"]);
+// Route::get("/dachebord",[DachebordController::class,"index"]);
 
   
 Route::get("/agent",[AgentController::class,"index"]);
@@ -57,24 +58,24 @@ Route::get("/support/{id}",[SupportController::class,"delete"])->name("sp.delete
 Route::get('/searchsu',[SupportController::class,'search'])->name('searchsu');
 //login
 
-Route::get('/login',[LoginController::class,'index'])->name('login');
-Route::post('/loginAdmim',[LoginController::class,'loginAdmim'])->name('loginAdmim');
+// Route::get('/login',[LoginController::class,'index'])->name('login');
+// Route::post('/loginAdmim',[LoginController::class,'loginAdmim'])->name('loginAdmim');
 
-Route::get('/register',[LoginController::class,'register'])->name('register');
-Route::post('/registeradm',[LoginController::class,'registeradm'])->name('registeradm');
+// Route::get('/register',[LoginController::class,'register'])->name('register');
+// Route::post('/registeradm',[LoginController::class,'registeradm'])->name('registeradm');
 
 //vei
 Route::get("/vehicules", [VehiculeController::class, "index"])->name("vehicules");
+
 Route::post("/Ajouter vehicules", [VehiculeController::class, "create"])->name("vehicules.create");
 
 Route::delete("/vehicules/{vehicules}", [VehiculeController::class, "delete"])->name("vehicules.supprimer");
-
 
 Route::get('/delete-vehicule/{id}', [VehiculeController::class, 'delete_vehicule']);
 Route::get('/update-vehicule/{id}', [VehiculeController::class, 'update_vehicule']);
 Route::post('/update/traitement', [VehiculeController::class, 'update_vehicule_traitement']);
 
-Route::get('archivage',[VehiculeController::class,'trashed'])->name("archivage");;
+Route::get('archivage',[VehiculeController::class,'trashed'])->name("archivage");
 Route::get('restore-1/{id}',[VehiculeController::class,'restore']);
 
 Route::get('/softDelete1/{id}',[VehiculeController::class,'softDelete']);
@@ -82,7 +83,7 @@ Route::get('forceDelete1/{id}',[VehiculeController::class,'forceDelete']);
 Route::get('restore-all-1',[VehiculeController::class,'restoreAll']);
 
 // search route
-Route::get('search',[VehiculeController::class,'search']);
+// Route::get('search',[VehiculeController::class,'search']);
 
 
 
@@ -99,5 +100,55 @@ Route::get('restore/{id}',[InterventionController::class,'restore']);
 Route::get('/softDelete/{id}',[InterventionController::class,'softDelete']);
 Route::get('forceDelete/{id}',[InterventionController::class,'forceDelete']);
 Route::get('restore-all',[InterventionController::class,'restoreAll']);
+// Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::controller(AuthController::class)->group(function(){
+
+    Route::get('register','register')->name('register');
+    Route::post('register','registerSave')->name('register.save');
+    Route::get('login','login')->name('login');
+    Route::post('login','loginAction')->name('login.action');
+
+     
+    Route::get('logout', 'logout')->middleware('auth')->name('logout');
+
+});
+
+//departement
+Route::get("/departement",[DepartementController::class,"index"]);
+
+Route::post("/Ajouter departement",[DepartementController::class,"create"])->name("dp.create");
+
+Route::post("/modifier departement",[DepartementController::class,"update"])->name("dp.update");
+
+Route::get("/departement/{id}",[DepartementController::class,"delete"])->name("dp.delete");
+
+Route::get('/searchdep',[DepartementController::class,'search'])->name('searchdep');
+
+//planning
+Route::get("/planning",[PlanningController::class,"index"]);
+
+Route::post("/Ajouter planning",[PlanningController::class,"create"])->name("pl.create");
+
+Route::post("/modifier planning",[PlanningController::class,"update"])->name("pl.update");
+
+Route::get("/planning/{id}",[PlanningController::class,"delete"])->name("pl.delete");
+
+Route::get('/searchpla',[PlanningController::class,'search'])->name('searchpla');
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', function () {
+        $rm=Agent::count();
+        return view('layout',compact('rm'));
+    })->name('dashboard');
+ 
+   
+});
+
+
+
+
 
 

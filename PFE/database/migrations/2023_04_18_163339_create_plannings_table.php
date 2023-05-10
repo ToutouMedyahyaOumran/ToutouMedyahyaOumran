@@ -13,13 +13,17 @@ return new class extends Migration
     {
         Schema::create('plannings', function (Blueprint $table) {
             $table->id();
-            $table->string('heurs');
-            $table->string('jours');
+            $table->time('heurs');
+            $table->date('jours');
             $table->timestamps();
 
             $table->unsignedBigInteger('agent_id');
 
             $table->foreign('agent_id')->references('id')->on('agents')->onDelete('cascade');
+
+            $table->unsignedBigInteger('admin_id');
+
+            $table->foreign('admin_id')->references('id')->on('admins')->onDelete('cascade');
         });
     }
 

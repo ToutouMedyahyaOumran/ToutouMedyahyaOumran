@@ -14,6 +14,17 @@
       defer
     ></script>
     <script src="../assets/js/init-alpine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<!-- Fonts -->
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+<!-- Styles -->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
   </head>
   <body>
     <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
@@ -42,31 +53,45 @@
               >
               Register
               </h1>
-              <form action="/registeradm" method="post">
+              <form action="{{ route('register.save') }}" method="post">
   @csrf
   <label class="block text-sm">
     <span class="text-gray-700 dark:text-gray-400">Nom</span>
     <input
-      class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-      placeholder="Nom" name="name"
+      class="  @error('name') is-invalid @enderror block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+      placeholder="Nom" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus
     />
+    @error('name')
+    <span class="invalid-feedbak"><strong>{{ $message }}</strong></span>
+    
+    @enderror
   </label>
  
  
   <label class="block text-sm">
     <span class="text-gray-700 dark:text-gray-400">Email</span>
     <input
-      class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-      placeholder="Email" name="email"
-    />
+      class=" @error('email') is-invalid @enderror block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+      placeholder="Email" name="email" value="{{ old('email') }}" required autocomplete="email" />
+
+      @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
   </label>
   <label class="block mt-4 text-sm">
     <span class="text-gray-700 dark:text-gray-400">Mot de passe</span>
     <input
-      class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-      placeholder="Mot de passe" name="password"
+      class=" @error('password') is-invalid @enderror block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+      placeholder="Mot de passe" name="password" required autocomplete="new-password"
       type="password"
     />
+    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
   </label>
  
 
@@ -82,7 +107,7 @@
               <p class="mt-1">
                 <a
                   class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline"
-                  href="/login"
+                  href="{{ route('login') }}"
                 >
                   login
                 </a>
@@ -92,5 +117,6 @@
         </div>
       </div>
     </div>
+   
   </body>
 </html>

@@ -838,7 +838,11 @@
       <th scope="row">{{$vehicule->id}}</th>
       <td>{{$vehicule->marque}}	</td>
       <td>{{$vehicule->modele}}</td>
-      <td>{{$vehicule->statut}}</td>
+      <td>@if($vehicule->statut =="Fonctionne")
+        <i class="fa fa-check-circle text-success" title="Fonctionne"></i>
+        @elseif($vehicule->statut =="en panne")
+        <i class="fa fa-exclamation-circle text-danger" title="En panne"></i>
+        @endif</td>
       <td>
       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text text-info btn" ><i class="fa fa-pencil"></i> </a>
       <a href="softDelete1/{{$vehicule->id}}" class="text-warning btn"><i class="fa fa-archive"></i> </a>
