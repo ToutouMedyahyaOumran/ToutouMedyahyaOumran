@@ -25,13 +25,13 @@
               <img
                 aria-hidden="true"
                 class="object-cover w-full h-full dark:hidden"
-                src="../assets/img/login-office.jpeg"
+                src="../assets/img/logour.png"
                 alt="Office"
               />
               <img
                 aria-hidden="true"
                 class="hidden object-cover w-full h-full dark:block"
-                src="../assets/img/login-office-dark.jpeg"
+                src="../assets/img/logour.png"
                 alt="Office"
               />
             </div>

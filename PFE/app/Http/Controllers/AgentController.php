@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Agent;
-use App\Models\departement;
+use App\Models\Departement;
 use Illuminate\Support\Facades\Hash;
 
 use Barryvdh\DomPDF\Facade\Pdf; ;
@@ -16,7 +16,7 @@ class AgentController extends Controller
 
      $rq = Agent::orderBy("nom", "asc")->paginate(3);
     //  $rq=Agent::all();
-     $re=departement::all();
+     $re=Departement::all();
      return view("agent",compact("rq","re"));
 
 //         $data=DB::select("select*from agents");
@@ -83,7 +83,7 @@ class AgentController extends Controller
    if($request==true){
     return back()->with("correct","agent bien ajouter");
    }else{
-    return back()->with("icorrect","agent nest pas ajouter");
+    return back()->with("incorrect","agent nest pas ajouter");
    }
 
 //    }

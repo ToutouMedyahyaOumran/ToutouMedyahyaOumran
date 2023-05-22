@@ -14,6 +14,8 @@ class Agent extends Model
     public function deppartemnt()
     {
         return $this->belongsTo(Departement::class, 'departement_id');
+      
+   
     }
 
     // use Searchable;
@@ -25,4 +27,6 @@ class Agent extends Model
     //     ];
     //     return $searchArray ;
     // }
+
+
 }

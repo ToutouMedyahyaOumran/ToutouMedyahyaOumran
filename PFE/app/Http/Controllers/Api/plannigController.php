@@ -10,12 +10,14 @@ use Illuminate\Http\Request;
 class plannigController extends Controller
 {
     function getPlanningsByagent($id) {
-        $plannings = Planning::where('admin_id', '=', $id)->get();
+        $plannings = Planning::where('agent_id', '=', $id)->with('agent')->get();
       
         return response()->json([
           'plannings' => $plannings
         ]);
       }
+
+      
       
 
 }

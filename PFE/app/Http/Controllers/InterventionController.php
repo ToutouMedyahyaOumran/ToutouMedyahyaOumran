@@ -38,7 +38,7 @@ class InterventionController extends Controller
  //4e how li 6ara medyahaya
         $agent_vehicule = new Affecter;
         $agent_vehicule->agent_id  = $request->agent_id;
-        $agent_vehicule->vehicule_id =$request->vehicules_id;
+        $agent_vehicule->vehicules_id =$request->vehicules_id;
         $agent_vehicule->save();
         return back()->with("succes", "vehicule ajouté avec succés !");
 

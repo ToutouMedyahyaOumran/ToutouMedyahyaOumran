@@ -31,4 +31,8 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'nexmo' => [
+        'VONAGE_SMS_FROM' => '15556666666',
+    ],
+    
 ];
