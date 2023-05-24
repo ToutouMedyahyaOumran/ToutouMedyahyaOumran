@@ -104,7 +104,7 @@ class SupportController extends Controller
      
        return back()->with("success", "La structure est mis à jour avec succés !");
    }
-     public function delete($id){
+    public function delete($id){
        $sp=Support::find($id);
        $sp->delete();
        return redirect('/support')->with('status','L\'agent a bien ete supprimer');

@@ -79,6 +79,7 @@
             </li>
           </ul>
           <ul>
+          @if(Auth::user()->role == 1)
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -101,6 +102,8 @@
                 <span class="ml-4">Gestion des agents</span>
               </a>
             </li>
+            @endif
+            @if(Auth::user()->role == 2)
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -125,7 +128,8 @@
 
               </a>
             </li>
-
+            @endif
+            @if(Auth::user()->role == 1 || Auth::user()->role == 2)
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -148,6 +152,8 @@
                 <span class="ml-4">Gestion des interventions</span>
               </a>
             </li>
+            @endif
+            @if(Auth::user()->role == 1)
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -171,6 +177,9 @@
                 <span class="ml-4">Gestion des supports</span>
               </a>
             </li>
+            @endif
+
+            @if(Auth::user()->role == 1)
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -193,6 +202,8 @@
                 <span class="ml-4">Gestion des Deppartements</span>
               </a>
             </li>
+            @endif
+            @if(Auth::user()->role == 1)
             <li class="relative px-6 py-3">
               <a
                 class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -215,8 +226,8 @@
                 <span class="ml-4">Gestion des planning</span>
               </a>
             </li>
-          
-
+          @endif
+          @if(Auth::user()->role == 1)
             <li class="relative px-6 py-3">
               <button
                 class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -276,7 +287,7 @@
                       interventions
                     </a>
                   </li>
-
+                @endif
                 </ul>
               </template>
             </li>

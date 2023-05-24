@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
     <link rel="stylesheet" href="../../public/assets/css/style.css">
     <script src="jquery-3.6.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -875,11 +881,16 @@
   <div class="mb-3">
 
     <label for="vehicules_id">Agents :</label>
-        <select name="agent_id" id="agent_id" required class="form-control" >
+    <select name="agent_id" id="agent_id" class="selectpicker form-control" multiple data-live-search="true">
+    @foreach ($agents as $agent)
+                <option value="{{ $agent->id }}">{{ $agent->nom }}</option>
+            @endforeach
+</select>
+        <!-- <select name="agent_id" id="agent_id" required class="form-control" >
             @foreach ($agents as $agent)
                 <option value="{{ $agent->id }}">{{ $agent->nom }}</option>
             @endforeach
-        </select>
+        </select> -->
   </div>
 
 

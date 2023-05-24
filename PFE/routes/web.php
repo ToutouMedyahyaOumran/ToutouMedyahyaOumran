@@ -84,9 +84,8 @@ Route::get('restore-all-1',[VehiculeController::class,'restoreAll']);
 
 // search route
 // Route::get('search',[VehiculeController::class,'search']);
-
-
-
+Route::group(['middleware'=>['web', 'auth', 'roles'],'roles' => [1]], function () {
+    
 // liste des interventions
 Route::get("/interventions", [InterventionController::class, "index"])->name("interventions");
 Route::post("/interventions/create", [InterventionController::class, "create"])->name("interventions.create");
@@ -100,6 +99,11 @@ Route::get('restore/{id}',[InterventionController::class,'restore']);
 Route::get('/softDelete/{id}',[InterventionController::class,'softDelete']);
 Route::get('forceDelete/{id}',[InterventionController::class,'forceDelete']);
 Route::get('restore-all',[InterventionController::class,'restoreAll']);
+
+});
+
+
+
 // Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -138,7 +142,8 @@ Route::get("/planning/{id}",[PlanningController::class,"delete"])->name("pl.dele
 Route::get('/searchpla',[PlanningController::class,'search'])->name('searchpla');
 
 
-Route::middleware('auth')->group(function () {
+   
+Route::group(['middleware'=>['web', 'auth', 'roles'],'roles' => [1]], function () {
     Route::get('dashboard', function () {
         $rm=Agent::count();
         return view('layout',compact('rm'));
