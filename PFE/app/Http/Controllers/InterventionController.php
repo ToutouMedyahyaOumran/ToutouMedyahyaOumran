@@ -7,10 +7,19 @@ use App\Models\Affecter;
 use App\Models\Intervention;
 use App\Models\Support;
 use App\Models\Vehicule;
+use Illuminate\Support\Facades\Auth;
+use App\Notifications\avis;
+use App\Models\User;
+use Illuminate\Support\Facades\Notification;
+
 use Illuminate\Http\Request;
 
 class InterventionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $interventions = Intervention::orderBy("id", "asc")->paginate(5);
@@ -35,11 +44,21 @@ class InterventionController extends Controller
         // Vehicule::create($request->all());
 
         Intervention::create($request->all());
- //4e how li 6ara medyahaya
+        //4e how li 6ara medyahaya
         $agent_vehicule = new Affecter;
         $agent_vehicule->agent_id  = $request->agent_id;
         $agent_vehicule->vehicules_id =$request->vehicules_id;
         $agent_vehicule->save();
+
+        $user = User::get();
+            
+            $interventions = Intervention::latest()->first();
+
+            // $user->notify(new \App\Notifications\avis($Chauffeures));
+            Notification::send($user, new \App\Notifications\urgence($interventions));
+
+           
+
         return back()->with("succes", "vehicule ajouté avec succés !");
 
     }
@@ -115,7 +134,15 @@ class InterventionController extends Controller
         return back();
     }
 
-
+    public function lire_tous(Request $request)
+    {
+        $userUnreadNotifications = auth()->user()->unreadNotifications;
+        if($userUnreadNotifications)
+        {
+            $userUnreadNotifications->markAsRead();
+            return back();
+        }   
+    }
 
 
 }

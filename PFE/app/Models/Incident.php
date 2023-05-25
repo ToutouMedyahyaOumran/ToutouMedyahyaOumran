@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Incident extends Model
 {
-    use HasFactory;
+    protected $table = 'incidents';
+    protected $fillable = ['type', 'localisation', 'mrz', 'image'];
 }

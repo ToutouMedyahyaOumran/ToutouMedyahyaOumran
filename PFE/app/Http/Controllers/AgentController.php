@@ -7,7 +7,10 @@ use App\Models\Agent;
 use App\Models\Departement;
 use Illuminate\Support\Facades\Hash;
 
-use Barryvdh\DomPDF\Facade\Pdf; ;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Auth;
+
+ ;
 
 
 class AgentController extends Controller
@@ -42,6 +45,7 @@ class AgentController extends Controller
         "phone" => $request->phone,
         "email" => $request->email,
         "motPs" => Hash::make($request->motPs),
+        // "usee" =>(Auth::user()->name),
        
         "departement_id" => $request->departement_id,
 
